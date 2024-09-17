@@ -1,0 +1,30 @@
+CRITICAL - 2024-09-13 12:26:37 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Models\Autor.php(51): CodeIgniter\Model->insert([...])
+ 4 APPPATH\Controllers\Conexao.php(38): App\Models\Autor->inserirDados('Birilo', 'daRoca')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Conexao->testConexao()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Conexao))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-13 12:28:46 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Models\Autor.php(51): CodeIgniter\Model->insert([...])
+ 4 APPPATH\Controllers\Conexao.php(38): App\Models\Autor->inserirDados('Birilo', 'daRoca')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Conexao->testConexao()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Conexao))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-13 12:28:49 --> There is no data to insert.
+in SYSTEMPATH\BaseModel.php on line 762.
+ 1 SYSTEMPATH\BaseModel.php(762): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('insert')
+ 2 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([], true)
+ 3 APPPATH\Models\Autor.php(51): CodeIgniter\Model->insert([...])
+ 4 APPPATH\Controllers\Conexao.php(38): App\Models\Autor->inserirDados('Birilo', 'daRoca')
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Conexao->testConexao()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Conexao))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,37 @@
+ERROR - 2024-09-04 09:39:51 --> mysqli_sql_exception: Can't create table `testecurso`.`aluno` (errno: 150 "Foreign key constraint is incorrectly formed") in C:\xampp4\htdocs\bancoDadosAluno\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp4\htdocs\bancoDadosAluno\system\Database\MySQLi\Connection.php(295): mysqli->query('CREATE TABLE `a...', 0)
+#1 C:\xampp4\htdocs\bancoDadosAluno\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `a...')
+#2 C:\xampp4\htdocs\bancoDadosAluno\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `a...')
+#3 C:\xampp4\htdocs\bancoDadosAluno\system\Database\Forge.php(546): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `a...')
+#4 C:\xampp4\htdocs\bancoDadosAluno\app\Database\Migrations\2024-09-04-092902_CreateTableAluno.php(36): CodeIgniter\Database\Forge->createTable('aluno')
+#5 C:\xampp4\htdocs\bancoDadosAluno\system\Database\MigrationRunner.php(877): App\Database\Migrations\CreateTableAluno->up()
+#6 C:\xampp4\htdocs\bancoDadosAluno\system\Database\MigrationRunner.php(188): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp4\htdocs\bancoDadosAluno\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp4\htdocs\bancoDadosAluno\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp4\htdocs\bancoDadosAluno\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp4\htdocs\bancoDadosAluno\spark(97): CodeIgniter\CLI\Console->run()
+#11 {main}
+CRITICAL - 2024-09-04 16:34:25 --> Declaration of App\Models\ProfessorModel::update($id, $data) must be compatible with CodeIgniter\Model::update($id = null, $data = null): bool
+in APPPATH\Models\ProfessorModel.php on line 32.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-09-04 16:36:20 --> Call to undefined method App\Controllers\Home::retornaTodosProf()
+in APPPATH\Controllers\Home.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->acesso()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-04 16:37:20 --> Call to undefined method App\Models\ProfessorModel::getResult
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->acesso()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-09-04 16:39:23 --> Undefined variable $resultado
+in APPPATH\Controllers\Home.php on line 22.
+ 1 APPPATH\Controllers\Home.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $resultado', 'C:\\xampp4\\htdocs\\bancoDadosAluno\\app\\Controllers\\Home.php', 22)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->acesso()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
