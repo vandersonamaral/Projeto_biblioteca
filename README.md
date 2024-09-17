@@ -5,9 +5,6 @@
 Este projeto é uma aplicação de biblioteca desenvolvida em CodeIgniter. Ele permite gerenciar autores, livros e leitores, oferecendo funcionalidades como visualização de dados, consulta por ID e condição, inserção de novos dados e ordenação. O projeto tem como objetivo demonstrar o uso de práticas de desenvolvimento com CodeIgniter e o gerenciamento de operações básicas em um banco de dados.
 
 ## Funcionalidades
-
-- **Conexão com o Banco de Dados**
-  - Testa e estabelece uma conexão com o banco de dados.
   
 - **Gestão de Autores**
   - Exibir todos os autores.
@@ -71,9 +68,6 @@ Este projeto é uma aplicação de biblioteca desenvolvida em CodeIgniter. Ele p
 10. Inicie o servidor de desenvolvimento:
 
 Rotas
-Conexão com o Banco de Dados
-
-GET /autor/testConexao
 
  - **Autores**
 
