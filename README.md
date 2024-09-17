@@ -1,54 +1,104 @@
-# CodeIgniter 4 Framework
+# Projeto Biblioteca
 
-## What is CodeIgniter?
+## Descrição
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+Este projeto é uma aplicação de biblioteca desenvolvida em CodeIgniter. Ele permite gerenciar autores, livros e leitores, oferecendo funcionalidades como visualização de dados, consulta por ID e condição, inserção de novos dados e ordenação. O projeto tem como objetivo demonstrar o uso de práticas de desenvolvimento com CodeIgniter e o gerenciamento de operações básicas em um banco de dados.
 
-This repository holds the distributable version of the framework.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+## Funcionalidades
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+- **Conexão com o Banco de Dados**
+  - Testa e estabelece uma conexão com o banco de dados.
+  
+- **Gestão de Autores**
+  - Exibir todos os autores.
+  - Consultar autores por ID e nome.
+  - Inserir novos autores.
+  - Ordenar autores por ID em ordem crescente ou decrescente.
+  
+- **Gestão de Livros**
+  - Exibir todos os livros.
+  - Consultar livros por ID e título.
+  - Inserir novos livros.
+  - Ordenar livros por título em ordem crescente ou decrescente.
+  
+- **Gestão de Leitores**
+  - Exibir todos os leitores.
+  - Consultar leitores por ID e nome.
+  - Inserir novos leitores.
+  - Ordenar leitores por ID em ordem crescente ou decrescente.
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+## Estrutura do Projeto
 
-## Important Change with index.php
+- **Controladores**
+  - `AutorController`: Gerencia operações relacionadas a autores.
+  - `LivroController`: Gerencia operações relacionadas a livros.
+  - `LeitorController`: Gerencia operações relacionadas a leitores.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+- **Modelos**
+  - `Autor`: Modelo para operações com autores.
+  - `Livro`: Modelo para operações com livros.
+  - `Leitor`: Modelo para operações com leitores.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+## Requisitos
 
-**Please** read the user guide for a better explanation of how CI4 works!
+- PHP 7.4 ou superior
+- CodeIgniter 4.x
+- Banco de Dados MySQL
 
-## Repository Management
+## Instalação
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+1. Clone este repositório para o seu ambiente local:
+   ```bash
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd nome-do-repositorio
+4. Instale as dependências do projeto:
+   ```bash
+   composer install
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+6. Configure o arquivo .env com as suas credenciais do banco de dados:
+   ```bash
+   database.default.hostname = localhost
+   database.default.database = nome_do_banco
+   database.default.username = seu_usuario
+   database.default.password = sua_senha
 
-## Contributing
+8. Execute as migrações para criar as tabelas no banco de dados:
+   ```bash
+   php spark migrate
+10. Inicie o servidor de desenvolvimento:
 
-We welcome contributions from the community.
+Rotas
+Conexão com o Banco de Dados
 
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
+GET /autor/testConexao
 
-## Server Requirements
+ - **Autores**
 
-PHP version 7.4 or higher is required, with the following extensions installed:
+GET /autor: Exibir todos os autores.  
+GET /autor/(:num): Consultar autor por ID.  
+GET /autor/search/(:segment): Consultar autor por nome.  
+POST /autor: Inserir um novo autor.
+GET /autor/order/(:any)/(:any): Ordenar autores.  
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
+ - **Livros**
 
-Additionally, make sure that the following extensions are enabled in your PHP:
+GET /livro: Exibir todos os livros.  
+GET /livro/(:num): Consultar livro por ID.  
+GET /livro/search/(:segment): Consultar livro por título.  
+POST /livro: Inserir um novo livro.  
+GET /livro/order/(:any)/(:any): Ordenar livros.  
 
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+- **Leitores**
+
+GET /leitor: Exibir todos os leitores.  
+GET /leitor/(:num): Consultar leitor por ID.  
+GET /leitor/search/(:segment): Consultar leitor por nome.  
+POST /leitor: Inserir um novo leitor.  
+GET /leitor/order/(:any)/(:any): Ordenar leitores.  
+
+ - Contribuição  
+
+Se desejar contribuir para este projeto, por favor, faça um fork do repositório e envie um pull request com suas alterações.
